@@ -1,0 +1,65 @@
+#myTodoListInput {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+ul#myTodoList li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    list-style: none;
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul#myTodoList li:nth-child(odd) {
+background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul#myTodoList li:hover {
+background: #ddd;
+}
+
+#myInput {
+    width: 66%;
+    float: left;
+    border: 1px solid #ddd;
+    padding: 10.5px;
+}
+
+.addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #49b14d;
+    color: #fff;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.addBtn:hover {
+    background-color: #49b14d;
+}
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px;
+}
+
+.close:hover {
+    background-color: #49b14d;
+    color: white;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="header-top">
+        <div class="container">
+            <div class="header-contact">
+                <a href="#" class="header-email">
+                    admin@gmail.com
+                </a>
+                <a href="#" class="header-phone">
+                    123456
+                </a>
+            </div>
+            <div class="header-menu">
+                <ul class="header-items">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section class="header">
+        <div class="container">
+            <div class="header-logo">
+                <a href="index.html"><img class="header-img" src="logo.png" alt=""></a>
+            </div>
+            <div class="header-search">
+                <form action="#" method="GET">
+                    <input type="text" placeholder="Search...." class="input-group-search" name="search" value="" />
+                    <div class="input-group-append search-btn">
+                        <input type="submit" class="input-group-text" value="Search">
+                    </div>
+                </form>
+            </div>
+        </div>
+	</section>
+	
+    <section class="mainmenu">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+                <li><a href="notice.html">Notice</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="register.html">Register</a></li>
+				<li><a href="todo.html">Todo</a></li>
+			</ul>
+        </div>
+    </section>
+
+    <section class="main-login">
+        <div class="container">
+            <div class="my-login">
+                <h2 class="text-center">Login</h2>
+                <hr>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="email">Email</label> <span class="text-danger">*</span>
+                        <input name="email" type="text" class="form-control " placeholder="Enter email" id="email">
+                        <span class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label> <span class="text-danger">*</span>
+                        <input name="password" type="password" class="form-control " placeholder="Enter password" id="password">
+                        <span class="error"></span>
+                    </div>
+                    <button type="submit" class="btn" id="formSubmit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section class="footer-bottom">
+        <div class="container">
+            <p>This site was developed by the team GUB</p>
+        </div>
+    </section>
+    <script>
+        document.getElementById("formSubmit").addEventListener("click", function(event) {
+            event.preventDefault();
+
+            var email     = document.getElementById("email");
+            var password  = document.getElementById("password");
+
+            var error = 0;
+            
+            password.nextElementSibling.innerText = '';
+            password.parentNode.classList.remove("has-error");
+            if(password.value.length == 0) {
+                error = 1;
+                password.nextElementSibling.innerText = 'The password field is required.';
+                password.parentNode.classList.add("has-error");
+            } else if(password.value.length < 7 || password.value.length > 12) {
+                error = 1;
+                password.nextElementSibling.innerText = 'The password must be between 7-12 characters.';
+                password.parentNode.classList.add("has-error");
+            }
+            
+            email.nextElementSibling.innerText = '';
+            email.parentNode.classList.remove("has-error");
+            if(email.value.length == 0) {
+                error = 1;
+                email.nextElementSibling.innerText = 'The email field is required.';
+                email.parentNode.classList.add("has-error");
+            } else if(email.value.length > 0) {
+                if(!ValidateEmailAddress(email.value)) {
+                    error = 1;
+                    email.nextElementSibling.innerText = 'The email address is invalid.';
+                    email.parentNode.classList.add("has-error");
+                }
+            }
+
+        });
+
+        function ValidateEmailAddress(emailString) {
+            // check for @ sign
+            var atSymbol = emailString.indexOf("@");
+            console.log(atSymbol);
+            
+            if(atSymbol < 1) {
+                return false;
+            }
+            
+            var dot = emailString.indexOf(".");
+            if(dot <= atSymbol + 2) {
+                return false;
+            } 
+            
+            // check that the dot is not at the end
+            if (dot === emailString.length - 1) {
+                return false;
+            }
+            
+            return true;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,417 @@
+/*Default Css*/
+*{
+	margin:0px;
+	padding: 0px;
+}
+
+:focus {
+    outline: none;
+}
+
+body {
+	color: #fff;
+	background: #fff;
+}
+
+ul {
+	margin-bottom: 0px;
+}
+
+img {
+	max-width: 100%
+}
+
+.hr-border {
+	border-color: #bce4be;
+	margin:0px;
+}
+
+.theme_heading_green {
+    color: #49b14d;
+    position: relative;
+    margin-bottom: 25px !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.theme_heading_green:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background: #49b14d !important;
+    top: 100%;
+    left: 2px;
+}
+
+.container {
+    width: 1140px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+input {
+    padding: 10px;
+}
+
+/*Header Top Section*/
+.header-top {
+	background: #49b14d;
+	padding: 5px 0px;
+	color: #fff;
+    overflow: hidden;
+}
+
+.header-top a {
+    color: #fff
+}
+
+.header-email {
+	padding: 5px 0px;
+	float: left;
+}
+.header-phone {
+	margin-left: 10px;
+	padding: 5px 0px;
+	float: left;
+}
+a.header-email:hover {
+	color: #e6e6e6;
+    text-decoration: none;
+}
+a.header-phone:hover {
+	color: #e6e6e6;
+    text-decoration: none;
+}
+
+.header-items {
+	float: right;
+	padding: 5px 0px;
+}
+
+.header-items li {
+	display: inline-block;
+	border-right: 1px solid #97d093;
+}
+.header-items li:last-child {
+	border-right: 0px solid #97d093;
+}
+
+.header-items li a {
+	color: #fff;
+	padding: 10px;
+}
+
+.header-items li a:hover {
+	color: #e6e6e6;
+	text-decoration: none;
+}
+
+/*Header Section*/
+.header {
+	padding: 25px 0px;
+}
+
+.header-logo {
+    float: left;
+}
+
+.header-img {
+    width: 120px;
+    height: 60px;
+}
+
+.header-search {
+	margin-top: 15px;
+    float: right;
+}
+
+.input-group-search {
+	border-radius: 25px 0px 0px 25px;
+	border:1px solid #49b14d;
+}
+
+.search-btn {
+    float: right;
+}
+
+.search-btn .input-group-text {
+	color: #fff;
+	cursor: pointer;
+	background: #49b14d;
+	border:1px solid #49b14d;
+	border-radius: 0px 25px 25px 0px;
+}
+
+
+/*Main Menu*/
+.mainmenu {
+	color: #fff;
+	padding: 5px 0px;
+	background: #49b14d;
+	overflow: hidden;
+}
+
+.mainmenu ul {
+	padding: 5px 0px;	
+}
+
+.mainmenu li {
+	display: inline-block;
+	border-right: 1px solid #97d093;
+}
+.mainmenu li:last-child {
+	border-right: 0px solid #97d093;
+}
+.mainmenu ul li a {
+	color: #fff;
+	padding: 5px 10px;
+	display: block;
+}
+
+.mainmenu ul li a.active {
+    color: #333 !important;
+}
+
+.mainmenu ul li a:hover{
+	color: #e6e6e6;
+	text-decoration: none;
+}
+
+
+/*Footer Bottom*/
+.footer-bottom {
+	color: #fff;
+	padding: 5px 0px;
+	background: #49b14d;
+	overflow: hidden;
+}
+
+.footer-bottom p{
+	margin-bottom: 0px;
+	padding:10px 0px;
+    text-align: center;
+}
+
+
+/*Home Page Book Category*/
+.main-content {
+    color: #000;
+    padding: 50px 0px;
+    background: #f7f7f7;
+}
+
+.single-content {
+    width: 258px;
+    border: 1px solid #bce4be;
+    margin-bottom: 25px;
+    background: #fff;
+    float: left;
+    margin-right: 25px;
+}
+.content-image {
+    overflow: hidden;
+    position: relative;
+}
+
+.content-image img {
+    display:block;
+    position:relative;
+    -webkit-transition:all .4s linear;
+    transition:all .4s linear;
+}
+
+.content-image:hover img {
+    -ms-transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+}
+
+.content-thumbnail-image {
+    width: 100%;
+    height: 120px;
+}
+.content-content {
+    padding: 5px;
+}
+.content-title {
+    color: #49b14d;
+    font-size: 14px;
+    line-height: 16px;
+    display: inline-block;
+}
+.content-title:hover{
+    color: #49b14d;
+    text-decoration: none;
+}
+
+
+/* Contact Form  */
+.contact-form .form-control{
+    border-radius:1rem;
+}
+
+.contact-image{
+    text-align: center;
+}
+
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    transform: rotate(29deg);
+}
+
+.contact-form form{
+    padding: 0% 10%;
+}
+
+.contact-form h3{
+    margin-bottom: 20px;
+    text-align: center;
+    color: #0062cc;
+}
+
+.btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/*Login*/
+.main-login {
+    padding: 50px 0px;
+    background:#f7f7f7;
+    margin-bottom: 0px;
+    color: #495057;
+}
+
+.my-login {
+    border-radius: 10px;
+    background:#fff;
+    padding: 20px;
+    width: 50%;
+    margin: 0px auto;
+    margin-bottom: 50px;
+}
+
+.my-login h2{
+    text-align: center;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.my-login hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.paragraph {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.contact-field {
+    float: left;
+    width: 46%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.btn {
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #49b14d;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+/* Notice Table */
+
+#notice {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#notice td, #notice th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#notice tr:nth-child(even){background-color: #f2f2f2;}
+
+#notice tr:hover {background-color: #ddd;}
+
+#notice th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #49b14d;
+    color: white;
+}
+
+.gallery-content {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+    float: left;
+}
+
+.home-image {
+    width: 500px; 
+    height: 300px; 
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.has-error .form-control {
+    border: 1px solid red;
+    margin: 0px;
+}
+.has-error .error {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.error {
+    color: red;
+}

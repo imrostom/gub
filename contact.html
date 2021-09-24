@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="header-top">
+        <div class="container">
+            <div class="header-contact">
+                <a href="#" class="header-email">
+                    admin@gmail.com
+                </a>
+                <a href="#" class="header-phone">
+                    123456
+                </a>
+            </div>
+            <div class="header-menu">
+                <ul class="header-items">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section class="header">
+        <div class="container">
+            <div class="header-logo">
+                <a href="index.html"><img class="header-img" src="logo.png" alt=""></a>
+            </div>
+            <div class="header-search">
+                <form action="#" method="GET">
+                    <input type="text" placeholder="Search...." class="input-group-search" name="search" value="" />
+                    <div class="input-group-append search-btn">
+                        <input type="submit" class="input-group-text" value="Search">
+                    </div>
+                </form>
+            </div>
+        </div>
+	</section>
+	
+    <section class="mainmenu">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+                <li><a href="notice.html">Notice</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="register.html">Register</a></li>
+				<li><a href="todo.html">Todo</a></li>
+			</ul>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <div class="container">
+			<div class="contact-form">
+				<div class="contact-image">
+					<img src="contact.png" alt="rocket_contact">
+				</div>
+				<form method="POST">
+					<h3>Drop Us a Message</h3>
+					<div class="contact-field">
+						<div class="form-group">
+							<input type="text" name="name" class="form-control " placeholder="Your Name *" id="name">
+                            <span class="error"></span>
+						</div>
+						<div class="form-group">
+							<input type="text" name="email" class="form-control " placeholder="Your Email *" id="email">
+                            <span class="error"></span>
+						</div>
+						<div class="form-group">
+							<input type="text" name="subject" class="form-control " placeholder="Your Subject *" id="subject">
+                            <span class="error"></span>
+						</div>
+						<div class="form-group">
+							<input type="submit" name="btnSubmit" class="btnContact" value="Send Message" id="formSubmit">
+						</div>
+					</div>
+					<div class="contact-field">
+						<div class="form-group">
+							<textarea name="message" class="form-control " rows="6" placeholder="Your Message *" id="message"></textarea>
+                            <span class="error"></span>
+						</div>
+					</div>
+				</form>
+			</div>
+        </div>
+    </section>
+
+    <section class="footer-bottom">
+        <div class="container">
+            <p>This site was developed by the team GUB</p>
+        </div>
+    </section>
+    <script>
+        document.getElementById("formSubmit").addEventListener("click", function(event) {
+            event.preventDefault();
+
+            var name     = document.getElementById("name");
+            var email     = document.getElementById("email");
+            var subject  = document.getElementById("subject");
+            var message  = document.getElementById("message");
+
+            var error = 0;
+            
+            name.nextElementSibling.innerText = '';
+            name.parentNode.classList.remove("has-error");
+            if(name.value.length == 0) {
+                error = 1;
+                name.nextElementSibling.innerText = 'The name field is required.';
+                name.parentNode.classList.add("has-error");
+            }
+            
+            email.nextElementSibling.innerText = '';
+            email.parentNode.classList.remove("has-error");
+            if(email.value.length == 0) {
+                error = 1;
+                email.nextElementSibling.innerText = 'The email field is required.';
+                email.parentNode.classList.add("has-error");
+            } else if(email.value.length > 0) {
+                if(!ValidateEmailAddress(email.value)) {
+                    error = 1;
+                    email.nextElementSibling.innerText = 'The email address is invalid.';
+                    email.parentNode.classList.add("has-error");
+                }
+            }
+
+            subject.nextElementSibling.innerText = '';
+            subject.parentNode.classList.remove("has-error");
+            if(subject.value.length == 0) {
+                error = 1;
+                subject.nextElementSibling.innerText = 'The subject field is required.';
+                subject.parentNode.classList.add("has-error");
+            }
+
+            message.nextElementSibling.innerText = '';
+            message.parentNode.classList.remove("has-error");
+            if(message.value.length == 0) {
+                error = 1;
+                message.nextElementSibling.innerText = 'The message field is required.';
+                message.parentNode.classList.add("has-error");
+            }
+
+        });
+
+        function ValidateEmailAddress(emailString) {
+            // check for @ sign
+            var atSymbol = emailString.indexOf("@");
+            console.log(atSymbol);
+            
+            if(atSymbol < 1) {
+                return false;
+            }
+            
+            var dot = emailString.indexOf(".");
+            if(dot <= atSymbol + 2) {
+                return false;
+            } 
+            
+            // check that the dot is not at the end
+            if (dot === emailString.length - 1) {
+                return false;
+            }
+            
+            return true;
+        }
+    </script>
+</body>
+
+</html>
